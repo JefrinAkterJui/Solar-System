@@ -1,0 +1,265 @@
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: url(../imge/star.jpg);
+}
+.sola_system{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+/* ------------------sun----------------- */
+
+.sun img {
+  width: 100px;
+  top: 272px;
+  left: 639px;
+  position: absolute;
+  border-radius: 50%;
+  animation: sunGlow 6s infinite linear;
+  filter: 
+  drop-shadow(16px 15px 49px rgba(246, 115, 0, 0.682)) 
+  drop-shadow(-16px 15px 49px rgba(246, 115, 0, 0.844)) 
+  drop-shadow(-16px -15px 49px rgba(246, 115, 0, 0.819)) 
+  drop-shadow(16px -15px 49px rgb(246, 113, 0.18));
+  
+}
+@keyframes sunGlow {
+  0% {
+    transform: rotate(0deg); 
+  }
+  50% {
+    transform: rotate(180deg); 
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}
+
+/* ------------------planet--------------- */
+.mercury {
+  width: 100px;
+  height: 100px;
+  top: 271px;
+  left: 638px;
+  border: 0.1px dotted #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: orbital 4s infinite linear;
+}
+.mercury img {
+  width: 19px;
+  top: -3px;
+  left: 20px;
+  position: absolute;
+  animation: orbit 3s infinite linear;
+}
+.venus {
+  width: 158px;
+  height: 158px;
+  top: 240px;
+  left: 610px;
+  border: 0.1px dotted #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: orbital 8s infinite linear;
+}
+.venus img {
+  width: 23px;
+  top: 115px;
+  left: 129px;
+  position: absolute;
+  animation: orbit 3s infinite linear;
+}
+.earth {
+  width: 225px;
+  height: 225px;
+  top: 205px;
+  left: 577px;
+  border: 0.1px dotted #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: orbital 16s infinite linear;
+}
+.earth img {
+  width: 43px;
+  top: 5px;
+  left: 169px;
+  position: absolute;
+  animation: orbit 3s infinite linear;
+}
+.moon {
+  width: 52px;
+  height: 48px;
+  top: 2px;
+  left: 163px;
+  border: 0.1px dotted #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: orbital 5s infinite linear;
+}
+.moon img {
+  width: 10px;
+  top: 5px;
+  left: 44px;
+  position: absolute;
+  animation: orbit 3s infinite linear;
+}
+.mars {
+  width: 280px;
+  height: 280px;
+  top: 177px;
+  left: 551px;
+  border: 0.1px dotted #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: orbital 20s infinite linear;
+}
+.mars img {
+  width: 30px;
+  top: 77px;
+  left: -8px;
+  position: absolute;
+  animation: orbit 3s infinite linear;
+}
+.jupiter {
+  width: 350px;
+  height: 350px;
+  top: 142px;
+  left: 516px;
+  border: 0.1px dotted #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: orbital 24s infinite linear;
+}
+.jupiter img {
+  width: 84px;
+  top: 215px;
+  left: 295px;
+  position: absolute;
+  animation: orbit 3s infinite linear;
+}
+.saturn {
+  width: 420px;
+  height: 420px;
+  top: 109px;
+  left: 480px;
+  border: 0.1px dotted #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: orbital 28s infinite linear;
+}
+.saturn img {
+  width: 85px;
+  top: -42px;
+  left: 211px;
+  position: absolute;
+  animation: orbit 5s infinite linear;
+}
+.uranus {
+  width: 480px;
+  height: 480px;
+  top: 78px;
+  left: 450px;
+  border: 0.1px dotted #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: orbital 32s infinite linear;
+}
+.uranus img {
+  width: 66px;
+  top: 398px;
+  left: 72px;
+  position: absolute;
+  animation: orbit 4s infinite linear;
+}
+.neptune {
+  width: 553px;
+  height: 553px;
+  top: 42px;
+  left: 414px;
+  border: 0.1px dotted #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: orbital 36s infinite linear;
+}
+.neptune img {
+  width: 48px;
+  top: 57px;
+  left: 53px;
+  position: absolute;
+  animation: orbit 6s infinite linear;
+}
+/* ----------------------------all planet animation--------------------- */
+@keyframes orbital{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes orbit {
+  from{transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+/* ---------------------falling-star--------------------- */
+.falling_star{
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  box-shadow: 
+  0 0 0 6px rgb(255, 255, 255, 0.1 ) inset,
+  0 0 0 12px rgb(255, 255, 255, 0.1 ) inset,
+  0 0 0 20px rgb(255, 255, 255, 1 ) inset;
+  animation: falling_star 3s linear infinite;
+}
+.falling_star::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, #ffffff, transparent);
+}
+
+@keyframes falling_star{
+  0%{ 
+      transform: rotate(315deg) translateX(0) scale(1.8);
+      opacity: 1;
+  }
+  70%{
+      opacity: 1;
+  }
+  100%{ 
+      transform: rotate(315deg) translateX(-1000px) scale(0.8);
+      opacity: 0;
+  }
+}
+.star1 {
+  top: 0;
+  right: 0;
+  left: initial;
+  animation-delay: 0;
+  animation-duration: 1s;
+}
+.star2 {
+  top: 0;
+  right: 20px;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+}
